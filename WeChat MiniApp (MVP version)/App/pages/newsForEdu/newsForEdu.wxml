@@ -1,0 +1,46 @@
+<!--返回-->
+  <view class="cu-bar bg-blue" bindtap="navigateTo_gameP1">
+    <view class="action">
+      <text class="cuIcon-close" bindtap></text> 返回
+    </view>
+    <view class="content text-bold">
+     {{connectionName}}
+    </view>
+  </view>
+
+
+<view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item" wx:for="{{newsContent}}">
+        <view class="content">
+          <view class="text-grey">新闻</view>
+          <view class="text-gray text-content text-df">
+            {{item}}
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2020年12月4日</view>
+            <view>
+              <text class="cuIcon-appreciate text-gray"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+</view>
+
+<view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item" wx:for="{{policyContent}}">
+        <view class="content">
+          <view class="text-grey">政策</view>
+          <view class="text-gray text-content text-df">
+            {{item}}
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2020年12月4日</view>
+            <view>
+              <text class="cuIcon-appreciate text-gray"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+</view>

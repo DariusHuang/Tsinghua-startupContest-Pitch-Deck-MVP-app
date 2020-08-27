@@ -1,0 +1,37 @@
+<!--返回-->
+  <view class="cu-bar bg-blue" bindtap="navigateTo_connectionBoard">
+    <view class="action">
+      <text class="cuIcon-close" bindtap></text> 返回
+    </view>
+    <view class="content text-bold">
+     {{connectionName}}
+    </view>
+  </view>
+
+<!--开头-->
+<view class="justify-start cu-bar bg-white solid-bottom">
+      <view class="cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+      <text>-{{playerLevel}}</text>
+</view>
+
+ <!--联系人列表-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange"></text> 联系人
+    </view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <view class="cu-item" wx:for="{{connectionNameList}}" data-id="{{index}}" bindtap="navigateTo_connection">
+      <block>
+      <view class="cu-avatar round lg" style="background-image:url(https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1244059411,2850845421&fm=26&gp=0.jpg);">
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">{{item}}</text>
+        </view>
+      </view>
+      </block>
+
+    </view>
+       
+  </view>

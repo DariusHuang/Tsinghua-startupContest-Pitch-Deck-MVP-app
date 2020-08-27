@@ -1,0 +1,49 @@
+<!--玩家信息-->
+<view class="justify-start cu-bar bg-white solid-bottom">
+      <view class="cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+      <text>-{{playerLevel}}</text>
+</view>
+
+<!--文本框-->
+  <view class="padding-lr bg-white margin-top">
+    <view class="solid-bottom padding">
+    <text class="text-Abc">Hi {{userInfo.nickName}}! 欢迎来到创业之旅101！</text>
+    </view>
+    <view class="padding" wx:if="{{scroll+1==1}}">这是一款专注于创业学习，在游戏中了解创业的软件。
+在这款小游戏中，我们将会带领你走过创业过程中最关键的步骤，如寻找创业主意、融资、管理等。</view>
+    
+        <view class="padding" wx:if="{{scroll+1==2}}">
+选择创业方向，我们构造新闻和行业的若干方向，各方向都有小类，你将看到每个行业的政策。这需要您筛选。同时你将有一份虚拟人脉（有模拟对话）和个人信息，这些都有助于你选择方向。</view>
+
+        <view class="padding" wx:if="{{scroll+1==3}}">
+        团队的组建也很重要，现在越来越强调合作，单枪匹马走不远。你还要考虑如何与他们协作，制定出一个商业计划。</view>
+
+        <view class="padding" wx:if="{{scroll+1==4}}">
+        融资融资！除了极少数的方案外都要这步操作！你将会面向市场获取更多的投资者，促进团队获得“第一桶金”来更好的发展。
+        </view>
+
+  <view class="padding" wx:if="{{scroll+1==5}}">
+  是时候创办公司了，创办之后将考验你的管理能力，并需要推出产品不断试错之后将其上市，再最终走向公司的发展
+  好了，让我们一起出发吧！
+</view>
+
+  </view>
+
+  
+
+
+
+<!--步骤条-->
+<scroll-view scroll-x class="bg-white padding response cu-steps steps-bottom" scroll-into-view="scroll-{{scroll}}" scroll-with-animation>
+    <view class="cu-item {{index>scroll?'':'text-green'}} padding-lr-xl" wx:for="{{5}}" wx:key id="scroll-{{index}}"><!--在这里设置次数-->
+    第{{index + 1}}步 <text class="num" data-index="{{index + 1}}"></text>
+    </view>
+</scroll-view>
+
+
+<!--按钮-->
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-green lg" bindtap="scrollSteps" wx:if="{{scroll!=4}}">下一步</button>
+  <button class="cu-btn bg-yellow margin-tb-sm lg" bindtap="navigateTo_Game" wx:if="{{scroll==4}}">冲冲冲！</button>
+  <button class="cu-btn bg-grey margin-tb-sm lg" bindtap="scrollStepsBack">回上一步看看</button>
+</view>

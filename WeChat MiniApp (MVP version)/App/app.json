@@ -1,0 +1,27 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/getUserInfo/getUserInfo",
+    "pages/logs/logs",
+    "pages/gameP1/gameP1",
+    "pages/connection/connection",
+    "pages/connectionList/connectionList",
+    "pages/newsForAI/newsForAI",
+    "pages/newsForGame/newsForGame",
+    "pages/newsForFood/newsForFood",
+    "pages/newsForEdu/newsForEdu",
+    "pages/board/board"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

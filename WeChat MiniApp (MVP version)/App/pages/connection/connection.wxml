@@ -1,0 +1,50 @@
+<!--返回-->
+  <view class="cu-bar bg-blue" bindtap="navigateTo_connectionList">
+    <view class="action">
+      <text class="cuIcon-close" bindtap></text> 返回
+    </view>
+    <view class="content text-bold">
+     {{connectionName}}
+    </view>
+  </view>
+
+<!--开始聊天吧！-->
+<view class="cu-chat">
+  <view class="cu-info round">开始和{{connectionName}}聊天吧！</view>
+</view>
+
+
+<!--对话框-->
+<view class="cu-chat" wx:for="{{chatContent}}" wx:if="{{index<chatCount}}">
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>{{item.question}}</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{userInfo.avatarUrl}});"></view>
+  </view>
+  
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=145692761,4091651670&fm=26&gp=0.jpg);"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>{{item.answer}}</text>
+      </view>
+    </view>
+  </view>
+
+
+</view>
+
+<!--发送栏-->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input placeholder="{{chatContent[chatCount].question}}" class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="basis-xs cu-btn bg-green shadow" bindtap="sendQuestion">发送</button>
+</view>

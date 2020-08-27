@@ -1,0 +1,83 @@
+<!--返回-->
+  <view class="cu-bar bg-blue" bindtap="navigateTo_board">
+    <view class="action">
+      <text class="cuIcon-close"></text> Back
+    </view>
+    <view class="content text-bold">
+     {{connectionName}}
+    </view>
+  </view>
+
+<view class="justify-start cu-bar bg-white solid-bottom">
+      <view class="cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+      <text>-{{playerLevel}}</text>
+</view>
+
+<view class="cu-card article {{isCard?'no-card':''}}" bindtap="navigateTo_newsForAI">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">Industry News & Research: AI+</view>
+    </view>
+    <view class="content">
+      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1822038054,1524270481&fm=26&gp=0.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> AI is THE hottest industry right now. It empowers all industries - and there's ton of hot money flowing.</view>
+        <view>
+          <view class="cu-tag bg-green light sm round">Related Background-Computer Science Major</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-card article {{isCard?'no-card':''}}" bindtap="navigateTo_newsForEdu">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">News & Research: Education</view>
+    </view>
+    <view class="content">
+      <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3981560432,3726670103&fm=26&gp=0.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> Industry with plenty opportunities all the time, but 2010 would be a better year to found a Edu firm i guess?</view>
+        <view>
+          <view class="cu-tag bg-green light sm round">Related Background-Education</view>
+          <view class="cu-tag bg-green light sm round">Connections</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-card article {{isCard?'no-card':''}}" bindtap="navigateTo_newsForFood">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">Industry News & Research: Food</view>
+    </view>
+    <view class="content">
+      <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1673200033,2004067306&fm=26&gp=0.jpg"></image>
+      <view class="desc">
+        <view class="text-content"> No matter how bad the economy is, people in China need innovative and tasty food and treats.</view>
+        <view>
+          
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-card article {{isCard?'no-card':''}}" bindtap="navigateTo_newsForGame">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">产业新闻与政策：游戏</view>
+    </view>
+    <view class="content">
+      <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2062812825,1788218295&fm=26&gp=0.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> 我爱打游戏！在4G时代，电子游戏已经成为了年轻人们最爱的消遣方式 - 即将到来的5G时代又会有哪些机会呢？</view>
+        <view>
+          <view class="cu-tag bg-yellow light sm round">热情</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="cu-list grid col-3 no-border">
+  <view class="cu-item" bindtap="gameP1">
+    <view class="cuIcon-noticefill text-olive">
+      <text>Industry Research & News</text>
+    </view>
+  </view>
+  <view class="cu-item" bindtap="connection">
+    <view class="cuIcon-recordfill text-orange">
+      <text>Industry Connections</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-cardboardfill text-red">
+      <text>My Background</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+<view class="action">
+      <text class="cuIcon-title text-orange "></text> Possible Startup Ideas Explained:
+    </view>
+</view>
+
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="justify-center">
+   <!--<video style="width:100%"></video>-->
+  </view>
+    <view class="cu-item {{menuArrow?'arrow':''}}" wx:for="{{ideas}}">
+      <view class="content">
+        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">{{item}}</text>
+      </view>
+    </view>
+  </view>
+    
+    <view class="flex"><button class="cu-btn bg-grey lg button-hover">Ready to go with this idea!</button></view>
